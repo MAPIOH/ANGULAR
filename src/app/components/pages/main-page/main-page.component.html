@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="home-container" *ngIf="router.url.includes('home')">
+    <img src="{{ imgLink }}">
+  </div>
+
+  <div class="maps-container" *ngIf="router.url.includes('maps')">
+    <app-map-card *ngFor="let item of listItems" [map]="item"></app-map-card>
+    <button [routerLink]="'/create/map'" class="test">+</button>
+  </div>
+
+  <div class="icons-container" *ngIf="router.url.includes('icons')">
+    <app-icon-card *ngFor="let item of listItems" [icon]="item"></app-icon-card>
+    <button [routerLink]="'/create/icon'" class="test">+</button>
+  </div>
+
+  <div class="leaflet-container" *ngIf="router.url.includes('editor')">
+    <div class="leaflet-size">
+      <app-leaflet></app-leaflet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <app-loading *ngIf="loaded"></app-loading>
+  <div [formGroup]="uploadForm" class="card">
+    <label *ngIf="url.includes('icon') || url.includes('map')" class="inp" for="inp">
+      <input [formControl]="name" placeholder="" id="inp" type="text" />
+      <span class="label">{{ formText }}</span>
+      <span class="focus-bg"></span>
+    </label>
+
+    <label *ngIf="url.includes('icon') || url.includes(url) && !url.includes('map')" class="inp" for="inp">
+      <input [formControl]="link" placeholder="" id="inp" type="text" />
+      <span class="label">Lien de l'icône</span>
+      <span class="focus-bg"></span>
+    </label>
+
+    <label *ngIf="url.includes('map')" for="file-upload" class="custom-file-upload">
+      Choisir un fichier
+    </label>
+    <input id="file-upload" (change)="upload($event)" type="file" hidden />
+
+    <div class="card-social">
+      <button (click)="createElement()" [disabled]="name.status === 'INVALID' || link.status === 'INVALID'"
+        class="material-icons">
+        done
+      </button>
+
+      <button (click)="backEntry()" class="material-icons">
+        undo
+      </button>
+    </div>
+  </div>
+</div>

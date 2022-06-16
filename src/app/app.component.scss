@@ -1,0 +1,34 @@
+.grid-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}
+
+.body {
+  grid-area: 2 / 1 / 3 / 2;
+  overflow: auto;
+}
+
+.menu {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.global {
+  grid-area: 1 / 1 / 3 / 2;
+  opacity: 0.15;
+  z-index: -1;
+  background-image: url("https://wallpapercave.com/wp/wp4313180.jpg");
+  background-position: fixed;
+}
+
+.global-image {
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+}

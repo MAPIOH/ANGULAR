@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-info">
+    <img class="card-avatar" src="{{ icon.link }}" />
+    <div class="card-title">Icône</div>
+    <div id="iconName" [attr.contenteditable]="editable" (focusout)="apiUpdate()" class="card-subtitle">{{ icon.name }}</div>
+  </div>
+  <div class="card-social">
+    <a routerLink="/edit/{{icon.name}}" class="material-icons button-edit">edit</a>
+    <a (click)="apiDelete(url, icon.id)" class="material-icons button-delete">delete</a>
+  </div>
+</div>

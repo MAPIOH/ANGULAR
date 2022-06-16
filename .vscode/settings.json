@@ -1,0 +1,23 @@
+{
+    "files.exclude": {
+        "node_modules": true,
+        ".angular": true,
+        ".git": true,
+        ".gitignore": true,
+        "src/assets/.gitkeep": true,
+        ".gitattributes": true,
+        ".gitmodules": true,
+        ".DS_Store": true,
+        "*.log": true,
+        "*.md": true,
+        "*.json": true,
+        "*.js": true,
+        ".editorconfig": true,
+        ".browserslistrc": true,
+        "src/polyfills.ts": true,
+        "src/favicon.ico": true,
+        "src/test.ts": true,
+        "src/environments": false,
+    },
+    "docwriter.language": "French"
+}

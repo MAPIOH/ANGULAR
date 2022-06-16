@@ -1,0 +1,16 @@
+<div class="card">
+  <app-loading *ngIf="!loaded"></app-loading>
+  <div *ngIf="loaded">
+  <div class="card-info">
+    <img class="card-avatar" src="{{ imageUrl + map.link }}"/>
+    <div class="card-title">Camping</div>
+    <div id="mapName" [attr.contenteditable]="editable" (focusout)="apiUpdate()" class="card-subtitle">{{ map.name }}</div>
+  </div>
+  <div class="card-social">
+    <a (click)="downloadFile()" class="material-icons button-edit">save</a>
+    <a routerLink="/editor/{{map.name}}" class="material-icons button-edit">edit</a>
+    <a (click)="printFile()" class="material-icons button-edit">print</a>
+    <a (click)="apiDelete(url, map.id)" class="material-icons button-delete">delete</a>
+  </div>
+</div>
+</div>
